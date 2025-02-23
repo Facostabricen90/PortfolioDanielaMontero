@@ -1,0 +1,29 @@
+/* Global styles */
+
+:root{
+    --primary-clr-400: #cc6fb5;
+
+    --secondary-clr-100: #fff;
+    --secondary-clr-200: #969595;
+    --secondary-clr-300: #696969;
+    --secondary-clr-400: #262a2c;
+    --secondary-clr-700: #1a1a1a;
+    --secondary-clr-900: #131313;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary-clr-700);
+    color: var(--secondary-clr-100);
+}
+
+input:active, input:focus, button:active, button:focus, textarea:active, textarea:focus{
+    outline: 2px solid var(--primary-clr-400);
+    outline-offset: 2px;
+}

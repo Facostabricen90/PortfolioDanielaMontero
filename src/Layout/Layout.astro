@@ -1,0 +1,32 @@
+---
+import '@fontsource/poppins';
+import '../styles/global.css';
+
+interface Props{
+    title?: string;
+    description?: string;
+}
+
+const { title = 'Montero Web Design', description = 'Adaptive Web Design for your Brand' } = Astro.props;
+---
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content={description} />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>{title}</title>
+    </head>
+    <body class="bg-purple-100 text-gray-900">
+        <slot />
+    </body>
+</html>
